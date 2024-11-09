@@ -1,0 +1,156 @@
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+.div-input {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container {
+    padding: 12px 0;
+    display: flex;
+    justify-content: end;
+
+    .add-button {
+        border-radius: 8px;
+        padding: 6px 16px;
+        background-color: green;
+        color: #fff;
+        outline: none;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(5, 153, 5);
+        }
+    }
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+
+    thead {
+
+        tr {
+            height: 45px;
+
+            th {
+                text-align: start;
+                padding: 0 20px;
+
+                span {
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+                
+            }
+            th:last-child {
+                text-align: end;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            background-color: #fff;
+            border-radius: 12px;
+            height: 59px;
+    
+            td {
+                text-align: start;
+                padding: 0;
+                width: 250px;
+                padding: 0 20px;
+
+                .name-avatar {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 8px;
+
+                    .name-image {
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 50%;
+                    }
+
+                }
+            }
+
+            td:last-child {
+                text-align: end;
+            }
+        }
+    }
+    
+    .edit-btn, .delete-btn {
+        outline: none;
+        border: none;
+        background-color: unset;
+        cursor: pointer;
+        padding: 0;
+
+        &:hover {
+            opacity: 0.6;
+          }
+    }
+
+    .edit-btn {
+        margin-right: 20px;
+    }
+}
+
+
+@media (max-width: $breakpoint-sm) {
+    
+}
+
+@media (max-width: $breakpoint-md) {
+    .button-container {
+        justify-content: center;
+        .add-button {
+            font-size: 12px;
+            font-weight: 500;
+            padding: 6px 12px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-lg) {
+    .user-table {
+        thead {
+            tr {
+                th {
+                    padding: 0 8px;
+                    span {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    padding: 0 8px;
+                }
+            }
+        }
+        .edit-btn {
+            margin-right: 8px;
+        }
+    }
+    
+}
